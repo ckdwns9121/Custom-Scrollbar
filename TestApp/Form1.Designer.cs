@@ -58,7 +58,7 @@ namespace TestApp {
             this.innerPanel.Name = "innerPanel";
             this.innerPanel.Size = new System.Drawing.Size(228, 162);
             this.innerPanel.TabIndex = 0;
-            this.innerPanel.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.ts);
+            this.innerPanel.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.item_scroll);
             // 
             // btnHidePanelScrollbar
             // 
@@ -101,15 +101,13 @@ namespace TestApp {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(83)))), ((int)(((byte)(83)))));
-            this.ClientSize = new System.Drawing.Size(549, 240);
+            this.ClientSize = new System.Drawing.Size(351, 240);
             this.Controls.Add(this.customScrollbar1);
             this.Controls.Add(this.btnHidePanelScrollbar);
             this.Controls.Add(this.outerPanel);
             this.Controls.Add(this.BasicScroll);
             this.Name = "Form1";
             this.Text = "Custom Scrollbar Test";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Click += new System.EventHandler(this.Form1_Click);
             this.outerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

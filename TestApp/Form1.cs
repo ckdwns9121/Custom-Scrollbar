@@ -29,18 +29,6 @@ namespace TestApp
             c.Text = "test";
             this.innerPanel.Controls.Add(c);
 
-
-            Button a = new Button();
-            a.Location = new Point(0, 900);
-            a.Text = "test";
-            this.innerPanel.Controls.Add(a);
-
-
-            Button t = new Button();
-            t.Location = new Point(0, 1900);
-            t.Text = "tes@@@t";
-            this.innerPanel.Controls.Add(t);
-
            // pt = new Point(this.innerPanel.AutoScrollPosition.X, this.innerPanel.AutoScrollPosition.Y);
             this.customScrollbar1.Minimum = 0;
             this.customScrollbar1.Maximum = this.innerPanel.DisplayRectangle.Height;
@@ -58,21 +46,6 @@ namespace TestApp
             Console.WriteLine(this.innerPanel.DisplayRectangle.Height);
         }
 
-
-        private void customScrollbar1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Click(object sender, EventArgs e)
-        {
-            //customScrollbar1.Value = 100;
-        }
 
         private void customScrollbar1_Scroll(object sender, EventArgs e)
         {
@@ -116,11 +89,10 @@ namespace TestApp
             }
         }
 
-        private void ts(object sender, MouseEventArgs e)
+        private void item_scroll(object sender, MouseEventArgs e)
         {
 
             customScrollbar1.Value = innerPanel.AutoScrollPosition.Y * -1;
-            Console.WriteLine("리스트 스크롤 밸류" + innerPanel.AutoScrollPosition.Y * -1);
             innerPanel.AutoScrollPosition = new Point(0, customScrollbar1.Value);
             customScrollbar1.Invalidate();
             Application.DoEvents();
@@ -132,7 +104,6 @@ namespace TestApp
             if (e.Delta > 0)
             {
                 customScrollbar1.Value = (innerPanel.AutoScrollPosition.Y + 120) * -1;
-                Console.WriteLine("커스텀 스크롤 밸류 업" + (innerPanel.AutoScrollPosition.Y + 120) * -1);
                 innerPanel.AutoScrollPosition = new Point(0, customScrollbar1.Value);
                 customScrollbar1.Invalidate();
                 Application.DoEvents();
@@ -140,7 +111,6 @@ namespace TestApp
             else
             {
                 customScrollbar1.Value = (innerPanel.AutoScrollPosition.Y - 120) * -1;
-                Console.WriteLine("커스텀 스크롤 밸류 다운" + (innerPanel.AutoScrollPosition.Y - 120)* -1);
                 innerPanel.AutoScrollPosition = new Point(0, customScrollbar1.Value);
                 customScrollbar1.Invalidate();
                 Application.DoEvents();

@@ -29,10 +29,9 @@ namespace TestApp
             c.Text = "test";
             this.innerPanel.Controls.Add(c);
 
-           // pt = new Point(this.innerPanel.AutoScrollPosition.X, this.innerPanel.AutoScrollPosition.Y);
+            pt = new Point(this.innerPanel.AutoScrollPosition.X, this.innerPanel.AutoScrollPosition.Y);
             this.customScrollbar1.Minimum = 0;
             this.customScrollbar1.Maximum = this.innerPanel.DisplayRectangle.Height;
-            //this.customScrollbar1.Maximum = 200;
 
             this.customScrollbar1.LargeChange = customScrollbar1.Maximum / customScrollbar1.Height + this.innerPanel.Height;
             this.customScrollbar1.SmallChange = 15;
@@ -99,7 +98,7 @@ namespace TestApp
 
         }
 
-        private void custom_Scroll(object sender, MouseEventArgs e)
+        private void Custom_Scroll(object sender, MouseEventArgs e)
         {
             if (e.Delta > 0)
             {

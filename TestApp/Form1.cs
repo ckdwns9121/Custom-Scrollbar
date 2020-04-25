@@ -99,7 +99,7 @@ namespace TestApp
 
         }
 
-        private void realScroll(object sender, MouseEventArgs e)
+        private void custom_Scroll(object sender, MouseEventArgs e)
         {
             if (e.Delta > 0)
             {

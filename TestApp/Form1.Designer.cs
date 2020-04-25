@@ -93,7 +93,7 @@ namespace TestApp {
             this.customScrollbar1.UpArrowImage = null;
             this.customScrollbar1.Value = 0;
             this.customScrollbar1.Scroll += new System.EventHandler(this.customScrollbar1_Scroll);
-            this.customScrollbar1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.realScroll);
+            this.customScrollbar1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.custom_Scroll);
             // 
             // Form1
             // 
